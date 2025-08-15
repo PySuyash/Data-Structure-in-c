@@ -16,3 +16,17 @@ char* findFirstVowel(char *str) {
     }
     return NULL;  // No vowel found
 }
+
+int main() {
+    char text[] = "Crypts and myths";
+    char *vowelPtr = findFirstVowel(text);
+
+    if (vowelPtr != NULL) {
+        printf("First vowel: %c\n", *vowelPtr);
+        printf("Address of first vowel: %p\n", (void*)vowelPtr);
+    } else {
+        printf("No vowel found in the string.\n");
+    }
+
+    return 0;
+}
