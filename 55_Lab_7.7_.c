@@ -11,3 +11,13 @@ int* maxOfThree(int *a, int *b, int *c) {
     else
         return c;
 }
+
+int main() {
+    int x = 42, y = 17, z = 99;
+    int *maxPtr = maxOfThree(&x, &y, &z);
+
+    printf("Maximum value: %d\n", *maxPtr);
+    printf("Address of maximum: %p\n", (void*)maxPtr);
+
+    return 0;
+}
