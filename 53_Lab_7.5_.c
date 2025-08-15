@@ -14,3 +14,18 @@ int* findLargestAddress(int *arr, int n) {
     }
     return maxPtr;
 }
+
+int main() {
+    int data[] = {12, 45, 7, 89, 33};
+    int size = sizeof(data) / sizeof(data[0]);
+
+    int *largest = findLargestAddress(data, size);
+    if (largest != NULL) {
+        printf("Largest value: %d\n", *largest);
+        printf("Address of largest: %p\n", (void*)largest);
+    } else {
+        printf("Invalid array.\n");
+    }
+
+    return 0;
+}
